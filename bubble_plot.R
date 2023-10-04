@@ -50,6 +50,17 @@ View(data)
 ggplot(data, aes(x = gdpPercap, y = lifeExp, size = pop)) +
     geom_point(alpha = 0.7)
 
+# Controlar o tamanho do círculo com scale_size() ------------------------------------------------------------------------------------------
+
+### A função scale_size premite estabelecer o tamanho dos menores e maiores círculos
+### usando o agurmnto range. Note que você pode customizar o nome da legenda com
+### o argumento name.
+
+### Os círculos frequentemente se sobrepoem. Para evitar ter grandes círculos no topo
+### do gráfico, você pode reordenar seu conjunto de dados primeiro.
+
+### Dê mais detalhes no mapeamento da variável numérica para o tamanho do círculo.
+### Use scale_radius, scale_size e scale_size_area.
 
 
 
