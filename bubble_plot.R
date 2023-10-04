@@ -6,5 +6,10 @@
 
 # Introdução -------------------------------------------------------------------------------------------------------------------------------
 
+### Um gráfico de bolhas é um gráfico de dispersão com uma terceira variável que é
+### mapeada através do tamanho de círculos. Essa postagem descreve vários métodos
+### para construir um gráfico de bolhas.
+
+# Passo a passo com ggplot2 ----------------------------------------------------------------------------------------------------------------
 
 
