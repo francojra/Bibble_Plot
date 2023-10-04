@@ -85,10 +85,32 @@ data %>%
                                   "Europa", "Oceania")) +
     labs(x = "Renda per capita", y = "Expectativa de vida")
 
+# Torne o gráfico mais bonito --------------------------------------------------------------------------------------------------------------
 
+### Como melhorar:
+### - Use cores interessantes do pacote viridis;
+### - Use theme_ipsum() do pacote hrbrthemes;
+### - Customize os eixos com xlab e ylab;
+### - adicione traço ao círculo: mude a forma para 21 e 
+### especifique a cor (traço) e preenchimento.
 
+### Pacotes
 
+library(hrbrthemes)
+library(viridis)
 
-
+data %>%
+  arrange(desc(pop)) %>%
+  mutate(country = factor(country, country)) %>%
+  ggplot(aes(x = gdpPercap, y = lifeExp, size = pop, fill = continent)) +
+    geom_point(alpha = 0.5, shape = 21, color = "black") +
+    scale_size(range = c(.1, 18), name = "Population (M)") +
+    scale_fill_viridis(discrete = TRUE, option = "A",
+                       name = "Continentes",
+                       labels = c("África", "Américas", "Ásia", 
+                                  "Europa", "Oceania")) +
+    theme_ipsum() +
+    ylab("Life Expectancy") +
+    xlab("Gdp per Capita") 
 
 
