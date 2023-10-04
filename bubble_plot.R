@@ -62,5 +62,33 @@ ggplot(data, aes(x = gdpPercap, y = lifeExp, size = pop)) +
 ### Dê mais detalhes no mapeamento da variável numérica para o tamanho do círculo.
 ### Use scale_radius, scale_size e scale_size_area.
 
+data %>%
+  arrange(desc(pop)) %>%
+  mutate(country = factor(country, country)) %>%
+  ggplot(aes(x = gdpPercap, y = lifeExp, size = pop)) +
+    geom_point(alpha = 0.5) +
+    scale_size(range = c(.1, 24), name = "Population (M)")
+
+# Adicionando uma quarta dimensão: cor -----------------------------------------------------------------------------------------------------
+
+### Se você tem mais uma variável em seu dataset, por que não mostrar ela usando
+### cores? Aqui, o continente de cada país é usado para controlar a cor do círculo.
+
+data %>%
+  arrange(desc(pop)) %>%
+  mutate(country = factor(country, country)) %>%
+  ggplot(aes(x = gdpPercap, y = lifeExp, size = pop, colour = continent)) +
+    geom_point(alpha = 0.5) +
+    scale_size(range = c(.1, 24), name = "Population (M)") +
+    scale_color_brewer(palette = "Set1", name = "Continentes",
+                       labels = c("África", "Américas", "Ásia", 
+                                  "Europa", "Oceania")) +
+    labs(x = "Renda per capita", y = "Expectativa de vida")
+
+
+
+
+
+
 
 
