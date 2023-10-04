@@ -17,3 +17,26 @@
 
 ### Essa postagem explica como construir um gráfico de bolhas com R e ggplot2.
 ### Ele promove vários exemplos reprodutíveis com a explicação dos códigos em R.
+
+# O mais básico gráfico de bolhas ----------------------------------------------------------------------------------------------------------
+
+### O gráfico de bolhas é um gráfico de dispersão onde uma terceira dimensão é
+### adicionada: o valor de uma variável numérica adicional é representado através
+### do tamanho dos pontos.
+
+### Com o ggplot2, os gráficos de bolhas são construídos graças a função geom_point().
+### No mínimo três variáveis deverão ser providas para o aesthetic aes(): x, y e size.
+### A legenda irá ser automaticamente construída pelo ggplot2.
+
+### Aqui, a relação entre expectativa de vida Y e renda per capita X de vários países
+### do mundo é representada. A população dos países é representada pelo círculo cinza.
+
+
+
+
+
+
+
+
+
+
