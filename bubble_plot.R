@@ -12,4 +12,8 @@
 
 # Passo a passo com ggplot2 ----------------------------------------------------------------------------------------------------------------
 
+### O pacote ggplot2 permite criar um gráfico de bolhas usando a função geom_point().
+### Os próximos exemplos irão mostrar o passo a passo.
 
+### Essa postagem explica como construir um gráfico de bolhas com R e ggplot2.
+### Ele promove vários exemplos reprodutíveis com a explicação dos códigos em R.
