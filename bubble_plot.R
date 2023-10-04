@@ -31,11 +31,24 @@
 ### Aqui, a relação entre expectativa de vida Y e renda per capita X de vários países
 ### do mundo é representada. A população dos países é representada pelo círculo cinza.
 
+### Pacotes
 
+library(ggplot2)
+library(dplyr)
 
+### Carregar dataset provido pelo pacote gapminder
 
+library(gapminder)
 
+data <- gapminder %>% 
+  filter(year == "2007") %>% 
+  dplyr::select(-year)
+View(data)
 
+### Gráfico
+
+ggplot(data, aes(x = gdpPercap, y = lifeExp, size = pop)) +
+    geom_point(alpha = 0.7)
 
 
 
