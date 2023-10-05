@@ -133,3 +133,24 @@ library(dplyr)
 library(plotly)
 library(viridis)
 library(hrbrthemes)
+
+### Carregar dados
+
+library(gapminder)
+data <- gapminder %>% filter(year == "2007") %>% dplyr::select(-year)
+View(data)
+
+### Manipular dados
+
+p <- data %>%
+  mutate(gdpPercap = round(gdpPercap,0)) %>%
+  mutate(pop = round(pop/1000000,2)) %>%
+  mutate(lifeExp = round(lifeExp,1)) %>%
+  arrange(desc(pop)) %>%
+  mutate(country = factor(country, country)) %>%
+  mutate(text = paste("Country: ", country, 
+                      "\nPopulation (M): ", pop, 
+                      "\nLife Expectancy: ", lifeExp, 
+                      "\nGdp per capita: ", gdpPercap, 
+                      sep = "")) %>%
+  
