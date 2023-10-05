@@ -113,4 +113,8 @@ data %>%
     ylab("Life Expectancy") +
     xlab("Gdp per Capita") 
 
+# Versão Interativa ------------------------------------------------------------------------------------------------------------------------
+
+### Aqui está um gráfico de bolhas interativo construído no R com a função ggplotly()
+### do pacote plotly.
 
