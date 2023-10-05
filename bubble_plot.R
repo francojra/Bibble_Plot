@@ -116,5 +116,10 @@ data %>%
 # Versão Interativa ------------------------------------------------------------------------------------------------------------------------
 
 ### Aqui está um gráfico de bolhas interativo construído no R com a função ggplotly()
-### do pacote plotly.
+### do pacote plotly. Tente passar o mouse sobre os círculos para obter informações
+### específicas de cada variável, ou selecione uma área de interesse dando um zoom.
+
+### Você também pode salvar o gráfico interativo como uma imagem em .png, deslizar
+### sobre os eixos para ver pontos específicos e dá dois cliques com mouse para 
+### para reiniciar o gráfico.
 
