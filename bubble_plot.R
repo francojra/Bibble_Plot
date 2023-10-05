@@ -154,3 +154,19 @@ p <- data %>%
                       "\nGdp per capita: ", gdpPercap, 
                       sep = "")) %>%
   
+# Clássico ggplot
+  
+  ggplot(aes(x = gdpPercap, y = lifeExp, 
+              size = pop, color = continent, 
+              text = text)) +
+    geom_point(alpha = 0.7) +
+    scale_size(range = c(1.4, 19), name = "Population (M)") +
+    scale_color_viridis(discrete = TRUE, guide = FALSE) +
+    theme_ipsum() +
+    theme(legend.position = "none")
+p  
+
+# Fazer o ggplot interativo com plotly
+
+pp <- ggplotly(p, tooltip = "text")
+pp
