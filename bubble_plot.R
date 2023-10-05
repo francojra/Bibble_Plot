@@ -123,3 +123,13 @@ data %>%
 ### sobre os eixos para ver pontos específicos e dá dois cliques com mouse para 
 ### para reiniciar o gráfico.
 
+### A função ggplotly() pode tornar qualquer gráfico feito com ggplot2 interativo.
+### A interação permite você obter informações específicas e detalahdas de cada ponto.
+
+### Pacotes
+
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(viridis)
+library(hrbrthemes)
